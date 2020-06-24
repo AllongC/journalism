@@ -1,12 +1,31 @@
 <template>
   <div class="inputSec">
-    <input type="text" :class="{username:username,userPwd:userPwd}" />
+    <input
+      :type="type"
+      :class="{username:username,userPwd:userPwd}"
+      :placeholder="inputText"
+      v-model="EditVal"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  props: ["username", "userPwd"]
+  data() {
+    return {
+      EditVal: "",
+      flag: ""
+    };
+  },
+  props: ["username", "userPwd", "type", "inputText", "rule", "errMsg"],
+  watch: {
+    EditVal(newVal) {
+      this.flag = new RegExp(this.rule).test(newVal);
+      if (!this.flag) {
+        console.log(this.errMsg);
+      }
+    }
+  }
 };
 </script>
 
@@ -20,6 +39,7 @@ export default {
     width: 100%;
     border-radius: 6.944vw;
     outline: none;
+    font-size: 4.444vw;
   }
   .username {
     background: url("../assets/01.png") white no-repeat center left 2.778vw;

@@ -1,8 +1,20 @@
 <template>
   <div class="palette">
     <CommonSec />
-    <inputSec username="username" />
-    <inputSec userPwd="userPwd" />
+    <inputSec
+      type="text"
+      username="username"
+      inputText="用户名/手机号码"
+      rule="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$"
+      errMsg="手机号码或用户名格式不正确"
+    />
+    <inputSec
+      type="password"
+      userPwd="userPwd"
+      inputText="密码"
+      rule="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}$"
+      errMsg="密码格式不正确"
+    />
     <MethodSec />
     <LoginSec />
   </div>

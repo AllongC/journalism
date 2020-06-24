@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="closeSec">
+    <div class="closeSec clearfix">
+      <span class="iconfont icon-fork"></span>
       <span class="iconfont icon-zhankai3"></span>
     </div>
     <div class="logoSec">
@@ -15,17 +16,22 @@ export default {};
 
 <style lang="less" scoped>
 .closeSec {
-  text-align: right;
-  padding: 6.111vw 6.111vw 0vw 0vw;
+  padding: 6.111vw 6.111vw 0vw 6.111vw;
+  .icon-fork {
+    float: right;
+    color: white;
+    font-size: 5vw;
+  }
   .icon-zhankai3 {
+    float: left;
     color: white;
     font-size: 6.111vw;
   }
 }
 .logoSec {
-  height: 55.556vw;
+  height: 60.556vw;
   text-align: center;
-  line-height: 55.556vw;
+  line-height: 60.556vw;
   .icon-logo1 {
     color: white;
     font-size: 14.444vw;
