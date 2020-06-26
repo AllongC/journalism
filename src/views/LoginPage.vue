@@ -5,16 +5,16 @@
       type="text"
       username="username"
       inputText="用户名/手机号码"
-      rule="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$"
-      errMsg="手机号码或用户名格式不正确"
+      :rule="userRule"
+      :errMsg="userErrMsg"
       @leaved="setUser"
     />
     <inputSec
       type="password"
       userPwd="userPwd"
       inputText="密码"
-      rule="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}$"
-      errMsg="密码格式不正确"
+      :rule="pwdRule"
+      :errMsg="pwdErrMsg"
       @leaved="setPwd"
     />
     <MethodSec />
@@ -37,7 +37,11 @@ export default {
   data() {
     return {
       newUser: "",
-      newPwd: ""
+      newPwd: "",
+      userRule: "^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$",
+      pwdRule: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[^]{8,16}$",
+      userErrMsg: "手机号码或用户名格式不正确",
+      pwdErrMsg: "密码格式不正确"
     };
   },
   methods: {
@@ -48,14 +52,29 @@ export default {
       this.newPwd = newVal;
     },
     sendData() {
+      if (!this.newPwd || !this.newUser) {
+        this.$toast.fail("输入不能为空!");
+        return;
+      }
+      let reg = new RegExp(this.userRule).test(this.newUser);
+      if (!reg) {
+        this.$toast.fail(this.userErrMsg);
+        return;
+      }
+      reg = new RegExp(this.pwdRule).test(this.newPwd);
+      if (!reg) {
+        this.$toast.fail(this.pwdErrMsg);
+        return;
+      }
       this.$axios({
-        url: "http://127.0.0.1:3000/login",
+        url: "/login",
         method: "post",
         data: {
           username: this.newUser,
           password: this.newPwd
         }
       }).then(res => {
+        console.log(res);
         const { message, data } = res.data;
         if (message == "登录成功") {
           localStorage.setItem("token", data.token);

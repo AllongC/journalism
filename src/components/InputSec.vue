@@ -22,7 +22,6 @@ export default {
     leaved() {
       if (!this.flag) {
         this.$toast.fail(this.errMsg);
-        return;
       }
       this.$emit("leaved", this.EditVal);
     }

@@ -5,24 +5,24 @@
       type="text"
       username="username"
       inputText="用户名/手机号码"
-      rule="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$"
-      errMsg="手机号码或用户名格式不正确"
+      :rule="userRule"
+      :errMsg="userErrMsg"
       @leaved="setUser"
     />
     <InputSec
       type="text"
       nickname="nickname"
       inputText="昵称"
-      rule="^[\u4E00-\u9FA5A-Za-z0-9_]+$"
-      errMsg="昵称格式不正确"
+      :rule="nickRule"
+      :errMsg="nickErrMsg"
       @leaved="setNick"
     />
     <InputSec
       type="password"
       userPwd="userPwd"
       inputText="密码"
-      rule="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}$"
-      errMsg="密码格式不正确"
+      :rule="pwdRule"
+      :errMsg="pwdErrMsg"
       @leaved="setPwd"
     />
     <MethodSec />
@@ -40,7 +40,13 @@ export default {
     return {
       newUser: "",
       newNick: "",
-      newPwd: ""
+      newPwd: "",
+      userRule: "^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$",
+      pwdRule: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[^]{8,16}$",
+      nickRule: "^[\u4E00-\u9FA5A-Za-z0-9_]+$",
+      userErrMsg: "手机号码或用户名格式不正确",
+      pwdErrMsg: "密码格式不正确",
+      nickErrMsg: "昵称格式不正确"
     };
   },
   methods: {
@@ -54,8 +60,27 @@ export default {
       this.newPwd = newVal;
     },
     sendData() {
+      if (!this.newPwd || !this.newUser || !this.newNick) {
+        this.$toast.fail("输入不能为空!");
+        return;
+      }
+      let reg = new RegExp(this.userRule).test(this.newUser);
+      if (!reg) {
+        this.$toast.fail(this.userErrMsg);
+        return;
+      }
+      reg = new RegExp(this.pwdRule).test(this.newPwd);
+      if (!reg) {
+        this.$toast.fail(this.pwdErrMsg);
+        return;
+      }
+      reg = new RegExp(this.nickRule).test(this.newNick);
+      if (!reg) {
+        this.$toast.fail(this.nickErrMsg);
+        return;
+      }
       this.$axios({
-        url: "http://127.0.0.1:3000/register",
+        url: "/register",
         method: "post",
         data: {
           username: this.newUser,
