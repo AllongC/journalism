@@ -16,7 +16,7 @@
       errMsg="密码格式不正确"
     />
     <MethodSec />
-    <LoginSec logInfo="登录" />
+    <LoginSec logInfo="登录" @send="sendData" />
   </div>
 </template>
 
@@ -31,6 +31,11 @@ export default {
     LoginSec,
     CommonSec,
     MethodSec
+  },
+  methods: {
+    sendData() {
+      console.log("父组件触发");
+    }
   }
 };
 </script>

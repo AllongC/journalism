@@ -1,12 +1,17 @@
 <template>
   <div class="LoginSec">
-    <button>{{logInfo}}</button>
+    <button @click="tigger">{{logInfo}}</button>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["logInfo"]
+  props: ["logInfo"],
+  methods: {
+    tigger() {
+      this.$emit("send");
+    }
+  }
 };
 </script>
 
