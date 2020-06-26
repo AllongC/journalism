@@ -1,11 +1,13 @@
 <template>
   <div class="LoginSec">
-    <button>登录</button>
+    <button>{{logInfo}}</button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["logInfo"]
+};
 </script>
 
 <style lang="less" scoped>

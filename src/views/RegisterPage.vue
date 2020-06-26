@@ -1,14 +1,21 @@
 <template>
   <div class="palette">
     <CommonSec />
-    <inputSec
+    <InputSec
       type="text"
       username="username"
       inputText="用户名/手机号码"
       rule="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$"
       errMsg="手机号码或用户名格式不正确"
     />
-    <inputSec
+    <InputSec
+      type="text"
+      nickname="nickname"
+      inputText="昵称"
+      rule="^[\u4E00-\u9FA5A-Za-z0-9_]+$"
+      errMsg="昵称格式不正确"
+    />
+    <InputSec
       type="password"
       userPwd="userPwd"
       inputText="密码"
@@ -16,21 +23,21 @@
       errMsg="密码格式不正确"
     />
     <MethodSec />
-    <LoginSec logInfo="登录" />
+    <LoginSec logInfo="注册" />
   </div>
 </template>
 
 <script>
-import inputSec from "@/components/InputSec";
-import LoginSec from "@/components/LoginSec";
 import CommonSec from "@/components/CommonSec";
+import InputSec from "@/components/InputSec";
 import MethodSec from "@/components/MethodSec";
+import LoginSec from "@/components/LoginSec";
 export default {
   components: {
-    inputSec,
-    LoginSec,
     CommonSec,
-    MethodSec
+    InputSec,
+    MethodSec,
+    LoginSec
   }
 };
 </script>

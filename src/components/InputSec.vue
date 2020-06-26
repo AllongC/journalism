@@ -2,7 +2,7 @@
   <div class="inputSec">
     <input
       :type="type"
-      :class="{username:username,userPwd:userPwd}"
+      :class="{username:username,userPwd:userPwd,nickname:nickname}"
       :placeholder="inputText"
       v-model="EditVal"
       @blur="leaved"
@@ -25,7 +25,15 @@ export default {
       }
     }
   },
-  props: ["username", "userPwd", "type", "inputText", "rule", "errMsg"],
+  props: [
+    "username",
+    "userPwd",
+    "type",
+    "inputText",
+    "rule",
+    "errMsg",
+    "nickname"
+  ],
   watch: {
     EditVal(newVal) {
       this.flag = new RegExp(this.rule).test(newVal);
@@ -51,6 +59,9 @@ export default {
   }
   .userPwd {
     background: url("../assets/mima.png") white no-repeat center left 2.778vw;
+  }
+  .nickname {
+    background: url("../assets/nicheng.png") white no-repeat center left 2.778vw;
   }
 }
 </style>
