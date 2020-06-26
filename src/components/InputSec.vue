@@ -5,6 +5,7 @@
       :class="{username:username,userPwd:userPwd}"
       :placeholder="inputText"
       v-model="EditVal"
+      @blur="leaved"
     />
   </div>
 </template>
@@ -17,13 +18,17 @@ export default {
       flag: ""
     };
   },
+  methods: {
+    leaved() {
+      if (!this.flag) {
+        console.log(this.errMsg);
+      }
+    }
+  },
   props: ["username", "userPwd", "type", "inputText", "rule", "errMsg"],
   watch: {
     EditVal(newVal) {
       this.flag = new RegExp(this.rule).test(newVal);
-      if (!this.flag) {
-        console.log(this.errMsg);
-      }
     }
   }
 };
