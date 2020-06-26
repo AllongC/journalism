@@ -21,8 +21,10 @@ export default {
   methods: {
     leaved() {
       if (!this.flag) {
-        console.log(this.errMsg);
+        this.$toast.fail(this.errMsg);
+        return;
       }
+      this.$emit("leaved", this.EditVal);
     }
   },
   props: [
