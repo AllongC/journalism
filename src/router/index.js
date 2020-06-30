@@ -12,6 +12,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
+
   {
     path: '/login',
     name: 'LoginPage',
@@ -22,11 +23,16 @@ const routes = [
     name: 'RegisterPage',
     component: RegisterPage
   },
+
   {
     path: '/center',
     name: 'CenterPage',
-    component: CenterPage
+    component: CenterPage,
+    meta: {
+      auth: true
+    }
   }
+
 ]
 
 const router = new VueRouter({
