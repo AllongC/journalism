@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="closeSec clearfix">
-      <span class="iconfont icon-fork"></span>
-      <span class="iconfont icon-zhankai3"></span>
+      <span class="iconfont icon-guanbi1"></span>
+      <span class="iconfont icon-zhankai"></span>
     </div>
     <div class="logoSec">
-      <p class="iconfont icon-logo1"></p>
+      <p class="iconfont icon-logo"></p>
     </div>
   </div>
 </template>
@@ -17,12 +17,12 @@ export default {};
 <style lang="less" scoped>
 .closeSec {
   padding: 6.111vw 6.111vw 0vw 6.111vw;
-  .icon-fork {
+  .icon-guanbi1 {
     float: right;
     color: white;
     font-size: 5vw;
   }
-  .icon-zhankai3 {
+  .icon-zhankai {
     float: left;
     color: white;
     font-size: 6.111vw;
@@ -32,7 +32,7 @@ export default {};
   height: 60.556vw;
   text-align: center;
   line-height: 60.556vw;
-  .icon-logo1 {
+  .icon-logo {
     color: white;
     font-size: 14.444vw;
     text-shadow: 0.278vw 0.556vw 1.944vw white;

@@ -2,17 +2,17 @@
   <div class="modeSce clearfix">
     <p class="modeFont">
       更多
-      <span class="iconfont icon-arrow-right"></span>
+      <span class="iconfont icon-jiantou"></span>
     </p>
     <ul>
       <li>
-        <p class="iconfont icon-wechat"></p>
+        <p class="iconfont icon-weixin1"></p>
       </li>
       <li>
-        <p class="iconfont icon-qq"></p>
+        <p class="iconfont icon-QQ"></p>
       </li>
       <li>
-        <p class="iconfont icon-social-_logo-facebook"></p>
+        <p class="iconfont icon-Facebook"></p>
       </li>
     </ul>
   </div>
@@ -34,22 +34,22 @@ export default {};
     margin-left: 2.778vw;
     font-size: 3.889vw;
     color: white;
-    .icon-arrow-right {
+    .icon-jiantou {
       font-size: 2.778vw;
     }
   }
   li {
     float: left;
     margin-right: 5.556vw;
-    .icon-wechat {
+    .icon-weixin1 {
       font-size: 5.556vw;
       color: #00ca0b;
     }
-    .icon-qq {
+    .icon-QQ {
       font-size: 5.556vw;
       color: #2b7eed;
     }
-    .icon-social-_logo-facebook {
+    .icon-Facebook {
       font-size: 5.556vw;
       color: #3b57a0;
     }
