@@ -5,7 +5,7 @@
       <span class="iconfont icon-arrow-right"></span>
     </p>
     <ul>
-      <li @click="togger">
+      <li>
         <p class="iconfont icon-wechat"></p>
       </li>
       <li>
@@ -19,13 +19,7 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    togger() {
-      this.$emit("wxClick");
-    }
-  }
-};
+export default {};
 </script>
 
 <style lang="less" scoped>

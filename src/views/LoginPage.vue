@@ -17,11 +17,8 @@
       :errMsg="pwdErrMsg"
       @leaved="setPwd"
     />
-    <MethodSec @wxClick="wxshow=true" />
+    <MethodSec />
     <LoginSec logInfo="登录" @send="sendData" />
-    <van-popup v-model="wxshow">
-      <img class="wx" src="@/assets/wx.png" alt />
-    </van-popup>
   </div>
 </template>
 
@@ -44,8 +41,7 @@ export default {
       userRule: "^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$",
       pwdRule: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[^]{8,16}$",
       userErrMsg: "手机号码或用户名格式不正确",
-      pwdErrMsg: "密码格式不正确",
-      wxshow: false
+      pwdErrMsg: "密码格式不正确"
     };
   },
   methods: {
@@ -102,11 +98,5 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-}
-.van-popup {
-  .wx {
-    width: 200px;
-    height: 200px;
-  }
 }
 </style>
