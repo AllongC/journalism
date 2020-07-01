@@ -38,7 +38,7 @@ export default {};
     height: 30px;
     padding: 0px 10px;
     text-align: center;
-    line-height: 80px;
+    line-height: 30px;
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -57,7 +57,6 @@ export default {};
   .bottom {
     width: 100%;
     border-radius: 0px 0px 10px 10px;
-    padding: 0px 10px;
     margin-top: 4px;
     display: flex;
     flex-wrap: wrap;
