@@ -12,7 +12,28 @@
         <span class="iconfont icon-jiantou1"></span>
       </div>
     </div>
-    <div class="set"></div>
+    <div class="set">
+      <div>
+        <p class="iconfont icon-zhuye1 font"></p>
+        <p>主页</p>
+      </div>
+      <div>
+        <p class="iconfont icon-wodeguanzhu font"></p>
+        <p>我的关注</p>
+      </div>
+      <div>
+        <p class="iconfont icon-wodeshoucang font"></p>
+        <p>收藏</p>
+      </div>
+      <div>
+        <p class="iconfont icon-xiugai font"></p>
+        <p>修改</p>
+      </div>
+      <div>
+        <p class="iconfont icon-shezhi font"></p>
+        <p>设置</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,39 +67,39 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 10px 0px 10px;
+    margin: 2.778vw 2.778vw 0vw 2.778vw;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 12px;
-    padding: 10px 6px;
+    border-radius: 3.333vw;
+    padding: 2.778vw 1.667vw;
     img {
-      width: 70px;
-      height: 70px;
+      width: 19.444vw;
+      height: 19.444vw;
       border-radius: 50%;
     }
     .title {
-      margin-left: 6px;
+      margin-left: 1.667vw;
       flex: 1;
       color: #2f2f2f;
       .vip {
         display: inline-block;
-        padding: 0px 10px;
-        height: 20px;
-        line-height: 20px;
+        padding: 0vw 2.778vw;
+        height: 5.556vw;
+        line-height: 5.556vw;
         text-align: center;
         background-color: #2f2f2f;
-        margin-top: 6px;
-        border-radius: 4px;
-        border-radius: 10px;
-        font-size: 12px;
-        margin-right: 4px;
+        margin-top: 1.667vw;
+        border-radius: 1.111vw;
+        border-radius: 2.778vw;
+        font-size: 3.333vw;
+        margin-right: 1.111vw;
         color: white;
       }
     }
     .dredge {
       color: #2f2f2f;
       i {
-        font-size: 14px;
-        margin-right: 4px;
+        font-size: 3.889vw;
+        margin-right: 1.111vw;
       }
     }
   }
@@ -86,10 +107,22 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4px 10px 0px 10px;
+    margin: 1.111vw 2.778vw 0vw 2.778vw;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 12px;
-    padding: 10px 6px;
+    border-radius: 3.333vw;
+    padding: 2.778vw 1.667vw;
+    div {
+      flex: 1;
+      padding: 0vw 2.222vw;
+      p {
+        margin-top: 1.111vw;
+        font-size: 3.333vw;
+        text-align: center;
+      }
+      .font {
+        font-size: 5.556vw;
+      }
+    }
   }
 }
 </style>

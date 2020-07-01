@@ -21,16 +21,16 @@ export default {
   margin-top: 5.556vw;
   button {
     width: 100%;
-    height: 60px;
-    border: 0px;
-    border-radius: 30px;
+    height: 16.667vw;
+    border: 0vw;
+    border-radius: 8.333vw;
     outline: none;
-    font-size: 18px;
+    font-size: 5vw;
     color: #2f2f2f;
     background-color: white;
   }
   button:hover {
-    box-shadow: 1px 1px 10px 1px white;
+    box-shadow: 1px 1px 2.778vw 1px white;
   }
 }
 </style>
