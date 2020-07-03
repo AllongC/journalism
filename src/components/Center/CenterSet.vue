@@ -1,30 +1,34 @@
 <template>
-  <div class="set">
-    <div>
-      <p class="iconfont icon-zhuye1 font"></p>
-      <p>主页</p>
-    </div>
-    <div>
-      <p class="iconfont icon-wodeguanzhu font"></p>
-      <p>我的关注</p>
-    </div>
-    <div>
-      <p class="iconfont icon-wodeshoucang font"></p>
-      <p>收藏</p>
-    </div>
-    <div>
-      <p class="iconfont icon-xiugai font"></p>
-      <p>修改</p>
-    </div>
-    <div>
-      <p class="iconfont icon-shezhi font"></p>
-      <p>设置</p>
+  <div>
+    <div class="set">
+      <div>
+        <p class="iconfont icon-zhuye1 font"></p>
+        <p>主页</p>
+      </div>
+      <div>
+        <p class="iconfont icon-wodeguanzhu font"></p>
+        <p>我的关注</p>
+      </div>
+      <div>
+        <p class="iconfont icon-wodeshoucang font"></p>
+        <p>收藏</p>
+      </div>
+      <div @click="$router.push('/edit/'+userId)">
+        <p class="iconfont icon-xiugai font"></p>
+        <p>修改</p>
+      </div>
+      <div>
+        <p class="iconfont icon-shezhi font"></p>
+        <p>设置</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["userId"]
+};
 </script>
 
 <style lang="less" scoped>
