@@ -2,7 +2,7 @@
   <div class="palette">
     <div class="totalTop">
       <CenterTop :user="user" />
-      <CenterSet :userId="userId" />
+      <CenterSet />
       <CenterFocus />
       <CenterVideo />
     </div>
@@ -26,8 +26,7 @@ export default {
   },
   data() {
     return {
-      user: [],
-      userId: localStorage.getItem("userId")
+      user: []
     };
   },
   mounted() {

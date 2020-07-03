@@ -39,7 +39,7 @@ const routes = [
     }
   },
   {
-    path: '/edit/:id',
+    path: '/edit',
     name: 'editPage',
     component: editPage,
     meta: {

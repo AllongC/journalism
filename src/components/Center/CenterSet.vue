@@ -13,7 +13,7 @@
         <p class="iconfont icon-wodeshoucang font"></p>
         <p>收藏</p>
       </div>
-      <div @click="$router.push('/edit/'+userId)">
+      <div @click="$router.push('/edit')">
         <p class="iconfont icon-xiugai font"></p>
         <p>修改</p>
       </div>
@@ -26,9 +26,7 @@
 </template>
 
 <script>
-export default {
-  props: ["userId"]
-};
+export default {};
 </script>
 
 <style lang="less" scoped>

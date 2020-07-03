@@ -1,6 +1,7 @@
 <template>
   <div class="centerTop">
-    <img src="@/assets/logo.jpg" alt />
+    <img v-if="user.head_img" :src="$axios.defaults.baseURL+ user.head_img" alt />
+    <img v-else src="@/assets/logo.jpg" alt />
     <div class="title">
       <p>{{user.nickname}}</p>
       <i class="vip">VIP</i>

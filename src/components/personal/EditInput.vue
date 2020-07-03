@@ -1,5 +1,5 @@
 <template>
-  <div class="editInput">
+  <div class="editInput" @click="editInfo">
     <p>{{name}}</p>
     <p class="info">{{val}}</p>
     <span class="iconfont icon-jiantou"></span>
@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  props: ["name", "val"]
+  props: ["name", "val"],
+  methods: {
+    editInfo() {
+      this.$emit("editInfo");
+    }
+  }
 };
 </script>
 
