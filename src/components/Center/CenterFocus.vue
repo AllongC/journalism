@@ -6,24 +6,19 @@
       <span class="iconfont icon-jiantou1"></span>
     </div>
     <div class="bottom">
-      <div class="focus">
-        <img src="@/assets/logo.jpg" alt />
-        <p>Along丶C</p>
-      </div>
-      <div class="focus">
-        <img src="@/assets/logo.jpg" alt />
-        <p>Along丶C</p>
-      </div>
-      <div class="focus">
-        <img src="@/assets/logo.jpg" alt />
-        <p>Along丶C</p>
+      <div class="focus" v-for="item in follows" :key="item.id">
+        <img v-if="item.head_img" :src="$axios.defaults.baseURL+ item.head_img" alt />
+        <img v-else src="@/assets/logo.jpg" alt />
+        <p>{{item.nickname}}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["follows"]
+};
 </script>
 
 <style lang="less" scoped>

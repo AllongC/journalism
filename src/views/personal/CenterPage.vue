@@ -3,7 +3,7 @@
     <div class="totalTop">
       <CenterTop :user="user" />
       <CenterSet />
-      <CenterFocus />
+      <CenterFocus :follows="follows" />
       <CenterVideo />
     </div>
     <CenterQuit />
@@ -26,8 +26,22 @@ export default {
   },
   data() {
     return {
-      user: []
+      user: [],
+      follows: []
     };
+  },
+  created() {
+    this.$axios({
+      url: "/user_follows",
+      method: "get"
+    }).then(res => {
+      const { data } = res.data;
+      if (data.length > 3) {
+        data.length = 3;
+      }
+      this.follows = data;
+      console.log(this.follows);
+    });
   },
   mounted() {
     this.$axios({

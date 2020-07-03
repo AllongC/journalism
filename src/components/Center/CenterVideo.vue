@@ -16,11 +16,11 @@
       </div>
       <div class="video">
         <div class="mask"></div>
-        <img src="https://image.pearvideo.com/cont/20200618/cont-1680794-12408180.jpg" alt />
+        <img src="https://image.pearvideo.com/cont/20200630/11905134-153447-1.png" alt />
       </div>
       <div class="video">
         <div class="mask"></div>
-        <img src="https://image.pearvideo.com/cont/20200618/cont-1680794-12408180.jpg" alt />
+        <img src="https://image.pearvideo.com/cont/20200615/11905134-150036-1.png" alt />
       </div>
     </div>
   </div>
