@@ -7,6 +7,7 @@ import RegisterPage from '@/views/RegisterPage'
 
 import CenterPage from '@/views/personal/CenterPage'
 import editPage from '@/views/personal/editPage'
+import FocusPage from '@/views/personal/FocusPage'
 import text from '@/views/personal/text'
 
 
@@ -42,6 +43,14 @@ const routes = [
     path: '/edit',
     name: 'editPage',
     component: editPage,
+    meta: {
+      auth: true
+    }
+  },
+  {
+    path: '/focus',
+    name: 'FocusPage',
+    component: FocusPage,
     meta: {
       auth: true
     }

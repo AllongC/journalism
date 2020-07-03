@@ -5,7 +5,7 @@
         <p class="iconfont icon-zhuye1 font"></p>
         <p>主页</p>
       </div>
-      <div>
+      <div @click="$router.push('/focus')">
         <p class="iconfont icon-wodeguanzhu font"></p>
         <p>我的关注</p>
       </div>
