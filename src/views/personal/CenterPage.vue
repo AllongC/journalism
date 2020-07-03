@@ -1,7 +1,7 @@
 <template>
   <div class="palette">
     <div class="totalTop">
-      <CenterTop />
+      <CenterTop :user="user" />
       <CenterSet :userId="userId" />
       <CenterFocus />
       <CenterVideo />
@@ -35,7 +35,9 @@ export default {
       url: "/user/" + localStorage.getItem("userId")
     }).then(res => {
       const { data, message } = res.data;
-      console.log(data);
+      if (message == "获取成功") {
+        this.user = data;
+      }
     });
   }
 };

@@ -2,7 +2,7 @@
   <div class="centerTop">
     <img src="@/assets/logo.jpg" alt />
     <div class="title">
-      <p>Along丶C</p>
+      <p>{{user.nickname}}</p>
       <i class="vip">VIP</i>
       <i class="vip">LV.0</i>
     </div>
@@ -14,7 +14,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["user"]
+};
 </script>
 
 <style lang="less" scoped>

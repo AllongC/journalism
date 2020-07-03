@@ -3,17 +3,18 @@
     <div class="edit">
       <div class="headeImg">
         <div class="mask">修改</div>
-        <img src="@/assets/logo.jpg" alt />
+        <img v-if="userInfo.head_img" :src="$axios.default.baseURL+ userInfo.head_img" alt />
+        <img v-else src="@/assets/logo.jpg" alt />
       </div>
     </div>
     <div class="userInfo">
-      <EditInput name="昵称" val="Along丶C" />
-      <EditInput name="性别" val="男" />
-      <EditInput name="用户名" val="10010" />
+      <EditInput name="昵称" :val="userInfo.nickname" />
+      <EditInput name="性别" :val="userInfo.gender==1?'男':'女'" />
+      <EditInput name="用户名" :val="userInfo.username" />
       <EditInput name="密码" val="******" />
       <EditInput name="设置" val />
     </div>
-    <p>完成修改</p>
+    <p>完成</p>
   </div>
 </template>
 
@@ -22,6 +23,23 @@ import EditInput from "@/components/personal/EditInput";
 export default {
   components: {
     EditInput
+  },
+  data() {
+    return {
+      userInfo: {}
+    };
+  },
+  mounted() {
+    this.$axios({
+      url: "/user/" + this.$route.params.id,
+      method: "get"
+    }).then(res => {
+      const { data, message } = res.data;
+      if (message == "获取成功") {
+        this.userInfo = data;
+        console.log(this.userInfo);
+      }
+    });
   }
 };
 </script>

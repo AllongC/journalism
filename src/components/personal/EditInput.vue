@@ -8,10 +8,7 @@
 
 <script>
 export default {
-  props: ["name", "val"],
-  mounted() {
-    console.log(this.name);
-  }
+  props: ["name", "val"]
 };
 </script>
 
