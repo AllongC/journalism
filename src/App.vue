@@ -10,7 +10,15 @@
   margin: 0;
   padding: 0;
 }
-
+#app {
+  background-color: #2f2f2f;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
 a {
   color: inherit;
 }

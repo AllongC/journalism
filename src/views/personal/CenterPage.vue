@@ -1,5 +1,5 @@
 <template>
-  <div class="palette">
+  <div>
     <div class="totalTop">
       <CenterTop :user="user" />
       <CenterSet />
@@ -57,18 +57,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.palette {
-  background-color: #2f2f2f;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  .totalTop {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    margin: 8.333vw 2.778vw 0vw 2.778vw;
-  }
+.totalTop {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  margin: 8.333vw 2.778vw 0vw 2.778vw;
 }
 </style>

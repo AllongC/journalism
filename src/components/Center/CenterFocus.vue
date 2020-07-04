@@ -1,6 +1,6 @@
 <template>
   <div class="own">
-    <div class="top">
+    <div class="top" @click="$router.push('/focus')">
       <span>我的关注</span>
       <p class="iconfont icon-wodeguanzhu"></p>
       <span class="iconfont icon-jiantou1"></span>
@@ -64,6 +64,10 @@ export default {
         margin-right: 8px;
       }
       p {
+        width: 110px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         font-size: 14px;
         color: #2f2f2f;
       }

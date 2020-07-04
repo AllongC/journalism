@@ -1,5 +1,5 @@
 <template>
-  <div class="palette">
+  <div>
     <div class="edit">
       <div class="headeImg">
         <div class="mask">修改</div>
@@ -126,15 +126,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.palette {
-  background-color: #2f2f2f;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-}
 .edit {
   display: flex;
   justify-content: center;
