@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="set">
-      <div>
+      <div @click="$router.push('/')">
         <p class="iconfont icon-zhuye1 font"></p>
         <p>主页</p>
       </div>

@@ -5,7 +5,7 @@
       <span class="iconfont icon-yuyin1"></span>
       <p>关键词</p>
     </div>
-    <p class="iconfont icon-gerenzhongxin"></p>
+    <p class="iconfont icon-gerenzhongxin" @click="$router.push('/center')"></p>
   </div>
 </template>
 
@@ -16,6 +16,9 @@ export default {};
 <style lang="less" scoped>
 .HomeTop {
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
   justify-content: center;
   align-items: center;
   color: #2f2f2f;
