@@ -1,14 +1,26 @@
 <template>
   <div>
-    <router-link to="/login">登录页</router-link>
-    <router-link to="/register">注册页</router-link>
-    <router-link to="/center">个人中心</router-link>
-    <router-view></router-view>
+    <HomeTop />
+    <van-tabs v-model="active" background="#979797" title-active-color="#2f2f2f" color="#2f2f2f">
+      <van-tab title="关注" title-style="font-size:4.444vw"></van-tab>
+      <van-tab title="粉丝" title-style="font-size:4.444vw"></van-tab>
+      <van-tab title="搜索" title-style="font-size:4.444vw"></van-tab>
+    </van-tabs>
   </div>
 </template>
 
 <script>
-export default {};
+import HomeTop from "@/components/HomeTop";
+export default {
+  components: {
+    HomeTop
+  },
+  data() {
+    return {
+      active: 0
+    };
+  }
+};
 </script>
 
 <style lang="less" scoped>
