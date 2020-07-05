@@ -2,7 +2,7 @@
   <div>
     <CommonTop val="关注" />
     <van-tabs v-model="active" background="#979797" title-active-color="#2f2f2f" color="#2f2f2f">
-      <van-tab title="关注">
+      <van-tab title="关注" title-style="font-size:4.444vw">
         <div class="outside">
           <div class="user" v-for="(item,index) in focusUser" :key="item.id">
             <img v-if="item.head_img" :src="$axios.defaults.baseURL+ item.head_img" alt />
@@ -20,10 +20,10 @@
           </div>
         </div>
       </van-tab>
-      <van-tab title="粉丝">
+      <van-tab title="粉丝" title-style="font-size:4.444vw">
         <div class="fs">你还没有粉丝...</div>
       </van-tab>
-      <van-tab title="搜索">
+      <van-tab title="搜索" title-style="font-size:4.444vw">
         <div class="outside">搜索</div>
       </van-tab>
     </van-tabs>
@@ -104,31 +104,33 @@ export default {
 .van-tabs {
   color: rgb(247, 247, 247);
 }
+
 .outside {
-  padding: 10px 0px 0px 10px;
+  padding: 2.778vw 0vw 0vw 2.778vw;
+  font-size: 4.444vw;
   .user {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 22.222vw;
     border-bottom: 1px solid #2f2f2f;
     img {
-      width: 50px;
-      height: 50px;
+      width: 13.889vw;
+      height: 13.889vw;
       object-fit: cover;
       border-radius: 50%;
-      margin-right: 10px;
-      border: 2px solid #fff;
+      margin-right: 2.778vw;
+      border: 0.556vw solid #fff;
     }
     .info {
-      font-size: 12px;
+      font-size: 3.333vw;
       .title {
-        font-size: 14px;
-        margin-bottom: 4px;
+        font-size: 3.889vw;
+        margin-bottom: 1.111vw;
         color: #fff;
       }
       .content {
-        width: 240px;
+        width: 66.667vw;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -137,17 +139,18 @@ export default {
     .icon-yuandiancaidan {
       text-align: right;
       flex: 1;
-      margin: 0px 10px 0px 0px;
+      margin: 0vw 2.778vw 0vw 0vw;
+      font-size: 4.444vw;
     }
     .upFollows {
       text-align: center;
       flex: 1;
-      margin: 0px 4px 0px 0px;
+      margin: 0vw 1.111vw 0vw 0vw;
       background-color: #979797;
       color: #fff;
-      padding: 4px;
-      font-size: 14px;
-      border-radius: 20px;
+      padding: 1.111vw;
+      font-size: 3.889vw;
+      border-radius: 5.556vw;
     }
   }
 }
@@ -155,7 +158,7 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: 50%;
-  font-size: 14px;
+  font-size: 3.889vw;
   color: #979797;
 }
 </style>

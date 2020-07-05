@@ -16,9 +16,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 2.778vw;
   color: #ffffff;
   font-weight: bold;
+  font-size: 4.444vw;
   p {
     flex: 1;
     text-align: center;

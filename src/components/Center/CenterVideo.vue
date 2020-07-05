@@ -32,55 +32,55 @@ export default {};
 
 <style lang="less" scoped>
 .collect {
-  padding: 10px 0px;
-  border-radius: 3.333vw;
+  padding: 2.778vw 0vw;
+  border-radius: 11.999px;
   .top {
-    height: 30px;
-    padding: 0px 10px;
+    height: 8.333vw;
+    padding: 0vw 2.778vw;
     text-align: center;
-    line-height: 30px;
+    line-height: 8.333vw;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 3.889vw;
     color: #2f2f2f;
     .icon-wodeshoucang {
       flex: 1;
       text-align: right;
-      margin-left: 4px;
-      font-size: 16px;
+      margin-left: 1.111vw;
+      font-size: 4.444vw;
     }
     .icon-jiantou1 {
-      margin-left: 4px;
-      font-size: 14px;
+      margin-left: 1.111vw;
+      font-size: 3.889vw;
     }
   }
   .bottom {
     width: 100%;
-    border-radius: 0px 0px 10px 10px;
-    margin-top: 4px;
+    border-radius: 0vw 0vw 2.778vw 2.778vw;
+    margin-top: 1.111vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     .video {
-      height: 150px;
+      height: 41.667vw;
       position: relative;
-      height: 100px;
-      width: 160px;
-      margin-right: 10px;
-      border-radius: 20px;
+      height: 27.778vw;
+      width: 44.444vw;
+      margin-right: 1.389vw;
+      border-radius: 5.556vw;
       object-fit: cover;
-      margin-top: 6px;
+      margin-top: 1.667vw;
       .mask {
         position: absolute;
         height: 100%;
         width: 100%;
-        border-radius: 20px;
+        border-radius: 5.556vw;
         background-color: rgba(0, 0, 0, 0.2);
       }
       img {
         height: 100%;
         width: 100%;
-        border-radius: 20px;
+        border-radius: 5.556vw;
       }
     }
   }

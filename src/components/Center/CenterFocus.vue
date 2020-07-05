@@ -23,33 +23,33 @@ export default {
 
 <style lang="less" scoped>
 .own {
-  padding: 10px 0px;
-  border-radius: 3.333vw;
+  padding: 2.778vw 0vw;
+  border-radius: 11.999px;
   .top {
-    height: 30px;
-    padding: 0px 10px;
+    height: 8.333vw;
+    padding: 0vw 2.778vw;
     text-align: center;
-    line-height: 30px;
+    line-height: 8.333vw;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 3.889vw;
     color: #2f2f2f;
     .icon-wodeguanzhu {
       flex: 1;
       text-align: right;
-      margin-left: 4px;
-      font-size: 16px;
+      margin-left: 1.111vw;
+      font-size: 4.444vw;
     }
     .icon-jiantou1 {
-      margin-left: 4px;
-      font-size: 14px;
+      margin-left: 1.111vw;
+      font-size: 3.889vw;
     }
   }
   .bottom {
-    height: 100px;
-    border-radius: 0px 0px 10px 10px;
-    padding: 0px 10px;
-    margin-top: 4px;
+    height: 27.778vw;
+    border-radius: 0vw 0vw 2.778vw 2.778vw;
+    padding: 0vw 2.778vw;
+    margin-top: 1.111vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,18 +57,19 @@ export default {
       flex: 1;
       text-align: center;
       img {
-        width: 40px;
-        height: 40px;
+        width: 11.111vw;
+        height: 11.111vw;
         border-radius: 50%;
-        border: 2px solid white;
-        margin-right: 8px;
+        border: 0.556vw solid white;
+        margin-right: 2.222vw;
+        object-fit: cover;
       }
       p {
-        width: 110px;
+        width: 30.556vw;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 14px;
+        font-size: 3.889vw;
         color: #2f2f2f;
       }
     }

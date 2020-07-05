@@ -30,11 +30,13 @@ export default {
     width: 19.444vw;
     height: 19.444vw;
     border-radius: 50%;
+    object-fit: cover;
   }
   .title {
     margin-left: 1.667vw;
     flex: 1;
     color: #2f2f2f;
+    font-size: 4.444vw;
     .vip {
       display: inline-block;
       padding: 0vw 2.778vw;
