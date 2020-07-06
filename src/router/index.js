@@ -6,8 +6,9 @@ import LoginPage from '@/views/LoginPage'
 import RegisterPage from '@/views/RegisterPage'
 
 import CenterPage from '@/views/personal/CenterPage'
-import editPage from '@/views/personal/editPage'
+import EditPage from '@/views/personal/EditPage'
 import FocusPage from '@/views/personal/FocusPage'
+import CollectPage from '@/views/personal/CollectPage'
 import text from '@/views/personal/text'
 
 
@@ -22,18 +23,18 @@ const routes = [
 
   {
     path: '/login',
-    name: 'LoginPage',
+    name: 'Login',
     component: LoginPage
   },
   {
     path: '/register',
-    name: 'RegisterPage',
+    name: 'Register',
     component: RegisterPage
   },
 
   {
     path: '/center',
-    name: 'CenterPage',
+    name: 'Center',
     component: CenterPage,
     meta: {
       auth: true
@@ -41,16 +42,24 @@ const routes = [
   },
   {
     path: '/edit',
-    name: 'editPage',
-    component: editPage,
+    name: 'Edit',
+    component: EditPage,
     meta: {
       auth: true
     }
   },
   {
     path: '/focus',
-    name: 'FocusPage',
+    name: 'Focus',
     component: FocusPage,
+    meta: {
+      auth: true
+    }
+  },
+  {
+    path: '/collect',
+    name: 'Collect',
+    component: CollectPage,
     meta: {
       auth: true
     }

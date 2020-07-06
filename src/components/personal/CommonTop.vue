@@ -1,7 +1,7 @@
 <template>
   <div class="CommonTop">
     <span class="iconfont icon-xiazai6" @click="$router.back()"></span>
-    <p>我的关注</p>
+    <p>{{val}}</p>
   </div>
 </template>
 

@@ -3,7 +3,7 @@
     <div class="top">
       <span>我的收藏</span>
       <p class="iconfont icon-wodeshoucang"></p>
-      <span class="iconfont icon-jiantou1"></span>
+      <span class="iconfont icon-jiantou1" @click="$router.push('/collect')"></span>
     </div>
     <div class="bottom">
       <div class="video">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CommonTop val="关注" />
+    <CommonTop val="我的关注" />
     <van-tabs v-model="active" background="#979797" title-active-color="#2f2f2f" color="#2f2f2f">
       <van-tab title="关注" title-style="font-size:4.444vw">
         <div class="outside">

@@ -9,7 +9,7 @@
         <p class="iconfont icon-wodeguanzhu font"></p>
         <p>我的关注</p>
       </div>
-      <div>
+      <div @click="$router.push('/collect')">
         <p class="iconfont icon-wodeshoucang font"></p>
         <p>收藏</p>
       </div>
