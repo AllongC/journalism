@@ -16,7 +16,7 @@
         :title="item.name"
         title-style="font-size:4.444vw"
       >
-        <Post :post="post" v-for="post in item.post" :key="post.id" />
+        <Post :post="post" :index="index" v-for="(post,index) in item.post" :key="post.id" />
       </van-tab>
     </van-tabs>
   </div>
