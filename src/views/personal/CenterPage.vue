@@ -59,7 +59,7 @@ export default {
 <style lang="less" scoped>
 .totalTop {
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
+  border-radius: 5.556vw;
   margin: 8.333vw 2.778vw 0vw 2.778vw;
 }
 </style>

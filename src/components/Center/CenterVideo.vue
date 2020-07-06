@@ -33,7 +33,7 @@ export default {};
 <style lang="less" scoped>
 .collect {
   padding: 2.778vw 0vw;
-  border-radius: 11.999px;
+  border-radius: 11.999vw;
   .top {
     height: 8.333vw;
     padding: 0vw 2.778vw;

@@ -20,16 +20,16 @@ export default {
 <style lang="less" scoped>
 .editInput {
   display: flex;
-  height: 60px;
+  height: 16.667vw;
   justify-content: center;
   align-items: center;
-  padding: 0px 8px;
+  padding: 0vw 2.222vw;
   color: white;
   border-bottom: 1px dashed #2f2f2f;
   .info {
     flex: 1;
     text-align: right;
-    margin-right: 6px;
+    margin-right: 1.667vw;
   }
 }
 </style>

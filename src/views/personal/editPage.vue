@@ -129,7 +129,7 @@ export default {
 .edit {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 13.889vw;
   .headeImg {
     position: relative;
     width: 19.444vw;
@@ -145,7 +145,7 @@ export default {
       background-color: rgba(0, 0, 0, 0.5);
       text-align: center;
       color: white;
-      font-size: 12px;
+      font-size: 3.333vw;
     }
     img {
       width: 100%;
@@ -163,20 +163,20 @@ export default {
 }
 .userInfo {
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 10px;
-  border-radius: 14px;
+  margin: 2.778vw;
+  border-radius: 3.889vw;
 }
 p {
-  height: 40px;
+  height: 11.111vw;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 20px 10px 10px 10px;
-  border-radius: 14px;
-  line-height: 40px;
+  margin: 5.556vw 2.778vw 2.778vw 2.778vw;
+  border-radius: 3.889vw;
+  line-height: 11.111vw;
   text-align: center;
   color: #fff;
 }
 .van-field {
-  font-size: 16px;
-  margin: 10px 0px;
+  font-size: 4.444vw;
+  margin: 2.778vw 0vw;
 }
 </style>

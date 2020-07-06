@@ -24,7 +24,7 @@ export default {};
 
 <style lang="less" scoped>
 .modeSce {
-  margin-top: 20px;
+  margin-top: 5.556vw;
   padding: 0vw 6vw 0vw 5.556vw;
   ul {
     float: right;

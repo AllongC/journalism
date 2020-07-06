@@ -26,11 +26,7 @@
 
 <script>
 export default {
-  props: ["post", "index"],
-  mounted() {
-    console.log(this.index);
-    console.log(this.index % 2 !== 0);
-  }
+  props: ["post", "index"]
 };
 </script>
 
@@ -38,14 +34,14 @@ export default {
 .item {
   display: inline-block;
   overflow: hidden;
-  margin: 10px 10px 0px 10px;
+  margin: 2.778vw 2.778vw 0vw 2.778vw;
   width: 44%;
-  height: 200px;
+  height: 55.556vw;
   background-color: #555;
-  border-radius: 30px;
+  border-radius: 8.333vw;
 }
 .two {
-  margin-top: 20px;
+  margin-top: 5.556vw;
 }
 .singlePhoto {
   position: relative;
@@ -53,25 +49,25 @@ export default {
   height: 100%;
   img {
     width: 100%;
-    min-height: 100px;
+    min-height: 27.778vw;
     object-fit: cover;
   }
   .mask {
     position: absolute;
     bottom: 0;
-    height: 100px;
+    height: 27.778vw;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 14px;
-    line-height: 24px;
-    padding: 0px 6px;
+    font-size: 3.889vw;
+    line-height: 6.667vw;
+    padding: 0vw 1.667vw;
     .title {
-      height: 60px;
+      height: 16.667vw;
     }
     .comment {
-      font-size: 12px;
-      margin-top: 10px;
+      font-size: 3.333vw;
+      margin-top: 2.778vw;
       text-align: center;
     }
   }
@@ -82,25 +78,25 @@ export default {
   height: 100%;
   img {
     width: 100%;
-    min-height: 100px;
+    min-height: 27.778vw;
     object-fit: cover;
   }
   .mask {
     position: absolute;
     bottom: 0;
-    height: 100px;
+    height: 27.778vw;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 14px;
-    line-height: 24px;
-    padding: 0px 6px;
+    font-size: 3.889vw;
+    line-height: 6.667vw;
+    padding: 0vw 1.667vw;
     .title {
-      height: 60px;
+      height: 16.667vw;
     }
     .comment {
-      font-size: 12px;
-      margin-top: 10px;
+      font-size: 3.333vw;
+      margin-top: 2.778vw;
       text-align: center;
     }
   }
@@ -111,24 +107,24 @@ export default {
   height: 100%;
   img {
     width: 100%;
-    min-height: 100px;
+    min-height: 27.778vw;
     object-fit: cover;
   }
   .mask {
     position: absolute;
     bottom: 0;
-    height: 100px;
+    height: 27.778vw;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 14px;
-    padding: 0px 6px;
+    font-size: 3.889vw;
+    padding: 0vw 1.667vw;
     .title {
-      height: 60px;
+      height: 16.667vw;
     }
     .comment {
-      font-size: 12px;
-      margin-top: 10px;
+      font-size: 3.333vw;
+      margin-top: 2.778vw;
       text-align: center;
     }
   }
