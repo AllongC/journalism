@@ -16,9 +16,6 @@ export default {};
 <style lang="less" scoped>
 .HomeTop {
   display: flex;
-  position: fixed;
-  width: 100%;
-  z-index: 99;
   justify-content: center;
   align-items: center;
   color: #2f2f2f;

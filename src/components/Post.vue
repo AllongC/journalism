@@ -1,29 +1,29 @@
 <template>
-  <div class="post">
-    <div class="singleImg" v-if="post.type==1&&post.cover.length<3">
-      <div class="singInfo">
-        <p class="title">{{post.title}}</p>
-        <p>{{post.user.nickname}} {{post.comment_length}}跟帖</p>
-      </div>
-      <img :src="post.cover[0].url" alt />
-    </div>
-    <div class="multiImg" v-else-if="post.type==1&&post.cover.length>=3">
-      <p class="title">{{post.title}}</p>
-      <div class="multi">
+  <div class="item">
+    <div class="items">
+      <div class="singlePhoto" v-if="post.type==1&&post.cover.length==1">
+        <div class="mask">
+          <p>{{post.title}}</p>
+          <p class="comment">{{post.user.nickname}} {{post.comment_length}}跟帖</p>
+        </div>
         <img :src="post.cover[0].url" alt />
-        <img :src="post.cover[1].url" alt />
-        <img :src="post.cover[2].url" alt />
       </div>
-      <p>{{post.user.nickname}} {{post.comment_length}}跟帖</p>
     </div>
-    <div class="video" v-else-if="post.type==2&&post.cover.length>=1">
-      <p class="title">{{post.title}}</p>
-      <div class="mask">
+    <div class="items two">
+      <div class="multiPhoto" v-if="post.type==1&&post.cover.length>=3">
+        <div class="mask">
+          <p>{{post.title}}</p>
+          <p class="comment">{{post.user.nickname}} {{post.comment_length}}跟帖</p>
+        </div>
         <img :src="post.cover[0].url" alt />
-        <div class="bgc"></div>
-        <span class="iconfont icon-ziyuan"></span>
       </div>
-      <p>{{post.user.nickname}} {{post.comment_length}}跟帖</p>
+      <div class="video" v-else-if="post.type==2&&post.cover.length>=1">
+        <div class="mask">
+          <p>{{post.title}}</p>
+          <p class="comment">{{post.user.nickname}} {{post.comment_length}}跟帖</p>
+        </div>
+        <img :src="post.cover[0].url" alt />
+      </div>
     </div>
   </div>
 </template>
@@ -35,98 +35,98 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.post {
-  color: white;
-}
-.singleImg {
-  box-sizing: border-box;
-  padding: 3.889vw 3.889vw;
+.item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #e4e4e4;
-  .singInfo {
-    flex: 1;
-    .title {
-      font-size: 4.444vw;
-      margin-top: 0vw;
-      color: white;
-    }
-    p {
-      margin-top: 2.778vw;
-      font-size: 3.889vw;
-      color: rgb(212, 211, 211);
-    }
+  .items {
+    overflow: hidden;
+    margin: 10px 10px 0px 10px;
+    width: 50%;
+    height: 200px;
+    background-color: #555;
+    border-radius: 30px;
   }
+  .two {
+    margin-top: 20px;
+  }
+}
+.singlePhoto {
+  position: relative;
+  width: 100%;
+  height: 100%;
   img {
-    width: 33.333vw;
-    height: 20.556vw;
+    width: 100%;
+    min-height: 100px;
     object-fit: cover;
   }
-}
-
-.multiImg {
-  padding: 3.889vw 3.889vw;
-  border-bottom: 1px solid #e4e4e4;
-  .title {
+  .mask {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 4.444vw;
-    margin-bottom: 1.389vw;
-  }
-  .multi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      object-fit: cover;
-      width: 33%;
-      height: 20.556vw;
-      margin: 1.111vw 0.556vw 0vw 0vw;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0px 6px;
+    .comment {
+      font-size: 12px;
+      margin-top: 24px;
+      text-align: center;
+      margin-right: 10px;
     }
   }
-  p {
-    margin-top: 2.778vw;
-    font-size: 3.889vw;
-    color: rgb(212, 211, 211);
-  }
 }
-
-.video {
-  padding: 3.889vw 3.889vw;
-  border-bottom: 1px solid #e4e4e4;
-  .title {
-    font-size: 4.444vw;
-    color: white;
-    margin-top: 0vw;
+.multiPhoto {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    min-height: 100px;
+    object-fit: cover;
   }
   .mask {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .bgc {
-      position: absolute;
-      width: 13.889vw;
-      height: 13.889vw;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-    }
-    img {
-      margin-top: 1.667vw;
-      height: 47.222vw;
-      width: 100%;
-      object-fit: cover;
-    }
-    .icon-ziyuan {
-      position: absolute;
-      font-size: 6.667vw;
-      color: white;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0px 6px;
+    .comment {
+      font-size: 12px;
+      margin-top: 24px;
+      text-align: center;
+      margin-right: 10px;
     }
   }
-  p {
-    margin-top: 2.778vw;
-    font-size: 3.889vw;
-    color: rgb(212, 211, 211);
+}
+.video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    min-height: 100px;
+    object-fit: cover;
+  }
+  .mask {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    padding: 0px 6px;
+    .comment {
+      font-size: 12px;
+      margin-top: 24px;
+      text-align: center;
+      margin-right: 10px;
+    }
   }
 }
 </style>

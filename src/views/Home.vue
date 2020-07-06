@@ -3,7 +3,6 @@
     <HomeTop />
     <div class="outside"></div>
     <van-tabs
-      sticky
       swipeable
       v-model="active"
       background="#979797"
@@ -79,7 +78,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.outside {
-  height: 16.667vw;
-}
 </style>
