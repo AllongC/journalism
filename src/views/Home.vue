@@ -16,7 +16,15 @@
         :title="item.name"
         title-style="font-size:4.444vw"
       >
-        <Post :post="post" :index="index" v-for="(post,index) in item.post" :key="post.id" />
+        <van-list
+          v-model="item.loading"
+          :finished="item.finished"
+          :immediate-check="false"
+          finished-text="没有更多了"
+          @load="loadMore"
+        >
+          <Post :post="post" :index="index" v-for="(post,index) in item.post" :key="post.id" />
+        </van-list>
       </van-tab>
     </van-tabs>
   </div>
@@ -49,14 +57,27 @@ export default {
       const total = this.column[this.active];
       this.$axios({
         url: "/post/?category=" + this.getId(),
-        method: "get"
+        method: "get",
+        params: {
+          pageIndex: total.pageIndex,
+          pageSize: total.pageSize
+        }
       }).then(res => {
         const { data } = res.data;
-        total.post = data;
+        total.post = [...total.post, ...data];
+        if (res.data.data.length < total.pageSize) {
+          total.finished = true;
+        }
       });
     },
     getId() {
       return this.column[this.active].id;
+    },
+    loadMore() {
+      const total = this.column[this.active];
+      total.pageIndex += 1;
+      this.getPost();
+      total.loading = false;
     }
   },
   mounted() {
@@ -68,7 +89,11 @@ export default {
       this.column = data.map(item => {
         return {
           ...item,
-          post: []
+          post: [],
+          pageIndex: 1,
+          pageSize: 5,
+          loading: false,
+          finished: false
         };
       });
       this.getPost();
