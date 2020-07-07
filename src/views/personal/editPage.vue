@@ -25,7 +25,7 @@
       <van-field label="原用户名：" :value="userInfo.username" readonly />
       <van-field label="新用户名：" placeholder="请输入新的用户名" v-model="newUser" />
     </van-dialog>
-    <van-dialog v-model="PwdShow" title="修改密码" show-cancel-button @confirm="editPwd">
+    <van-dialog v-model="PwdShow" title="修改密码" show-cancel-button @confirm="editPwd" class="pwd">
       <van-field label="旧密码：" placeholder="请输入旧的密码" v-model="oldPwd" />
       <van-field label="新密码：" placeholder="请输入新的密码" v-model="newPwd" />
     </van-dialog>
@@ -176,7 +176,7 @@ p {
   color: #fff;
 }
 .van-field {
-  font-size: 4.444vw;
+  font-size: 3.889vw;
   margin: 2.778vw 0vw;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="item" :class="{two:index % 2 !== 0}">
+  <div class="item" :class="{two:index % 2 !== 0}" @click="$router.push('/detail/'+post.id)">
     <div class="singlePhoto" v-if="post.type==1&&post.cover.length==1">
       <div class="mask">
         <p class="title">{{post.title}}</p>
@@ -64,6 +64,7 @@ export default {
     padding: 0vw 1.667vw;
     .title {
       height: 16.667vw;
+      margin: 0px 1.111vw;
     }
     .comment {
       font-size: 3.333vw;
@@ -93,6 +94,7 @@ export default {
     padding: 0vw 1.667vw;
     .title {
       height: 16.667vw;
+      margin: 0px 1.111vw;
     }
     .comment {
       font-size: 3.333vw;
@@ -121,6 +123,7 @@ export default {
     padding: 0vw 1.667vw;
     .title {
       height: 16.667vw;
+      margin: 0px 1.111vw;
     }
     .comment {
       font-size: 3.333vw;

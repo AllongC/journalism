@@ -2,8 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+
 import LoginPage from '@/views/LoginPage'
 import RegisterPage from '@/views/RegisterPage'
+
+import DetailPage from '../views/category/DetailPage'
 
 import CenterPage from '@/views/personal/CenterPage'
 import EditPage from '@/views/personal/EditPage'
@@ -30,6 +33,12 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: RegisterPage
+  },
+
+  {
+    path: '/detail/:id',
+    name: 'Detail',
+    component: DetailPage
   },
 
   {
