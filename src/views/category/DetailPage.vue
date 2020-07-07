@@ -28,24 +28,38 @@
     <div class="roll">
       <p @click="unFollow" v-if="post.has_follow" class="iconfont font icon-B"></p>
       <p @click="follow" v-else class="iconfont font icon-guanzhu3"></p>
-      <p class="iconfont font icon-pinglun1"></p>
+      <p is-link @click="showPopup" class="iconfont font icon-pinglun1"></p>
       <p @click="like" class="iconfont font icon-ziyuan1" :class="{redfont:post.has_like}"></p>
       <p class="font num">{{post.like_length}}</p>
       <p @click="star" v-if="post.has_star" class="iconfont font icon-shoucang"></p>
       <p @click="star" v-else class="iconfont font icon-xiazai11"></p>
       <p class="iconfont font icon-share_icon"></p>
     </div>
+    <van-popup v-model="commentShow" round position="bottom" :style="{ height: '70%',}">
+      <p class="title">评论</p>
+      <p class="miniTitle">精彩评论</p>
+      <Comment :comment="item" v-for="item in comment" :key="item.id" />
+    </van-popup>
   </div>
 </template>
 
 <script>
+import Comment from "@/components/Comment/index";
 export default {
+  components: {
+    Comment
+  },
   data() {
     return {
-      post: []
+      post: [],
+      commentShow: false,
+      comment: []
     };
   },
   methods: {
+    showPopup() {
+      this.commentShow = true;
+    },
     load() {
       this.$axios({
         url: "/post/" + this.$route.params.id
@@ -104,6 +118,13 @@ export default {
   },
   mounted() {
     this.load();
+    this.$axios({
+      url: "/post_comment/" + this.$route.params.id
+    }).then(res => {
+      const { data } = res.data;
+      this.comment = data;
+      console.log(this.comment);
+    });
   }
 };
 </script>
@@ -213,6 +234,19 @@ export default {
   }
   .icon-shoucang {
     color: rgb(231, 231, 93);
+  }
+}
+.van-popup {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2.778vw;
+  .title {
+    text-align: center;
+    color: white;
+  }
+  .miniTitle {
+    color: white;
+    font-size: 3.333vw;
   }
 }
 </style>
