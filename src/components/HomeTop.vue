@@ -1,7 +1,7 @@
 <template>
   <div class="HomeTop">
     <span class="iconfont icon-logo"></span>
-    <div class="search">
+    <div class="search" @click="$router.push('/search')">
       <span class="iconfont icon-yuyin1"></span>
       <p>关键词</p>
     </div>

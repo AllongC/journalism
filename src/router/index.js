@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 
 import LoginPage from '@/views/LoginPage'
 import RegisterPage from '@/views/RegisterPage'
+import SearchPage from '@/views/SearchPage'
 
 import DetailPage from '../views/category/DetailPage'
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: RegisterPage
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: SearchPage
   },
 
   {
