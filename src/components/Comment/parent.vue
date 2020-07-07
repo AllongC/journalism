@@ -4,16 +4,24 @@
       <span class="nickname">{{comment.user.nickname}}</span>
       :
       <p class="content">{{comment.content}}</p>
-      <p>回复</p>
+      <p @click="sendId">回复</p>
     </div>
-    <parent v-if="comment.parent" :comment="comment.parent" />
+    <parent v-if="comment.parent" :comment="comment.parent" @parentId="getId" />
   </div>
 </template>
 
 <script>
 export default {
   props: ["comment"],
-  name: "parent"
+  name: "parent",
+  methods: {
+    sendId() {
+      this.$emit("parentId", this.comment.id);
+    },
+    getId(id) {
+      this.$emit("parentId", id);
+    }
+  }
 };
 </script>
 

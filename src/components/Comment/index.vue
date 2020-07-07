@@ -8,9 +8,9 @@
         <p class="time">{{comment.create_date.split('T')[0]}}</p>
         <p class="cotent">{{comment.content}}</p>
       </div>
-      <p class="replace">回复</p>
+      <p class="replace" @click="replace">回复</p>
     </div>
-    <parent v-if="comment.parent" :comment="comment.parent" />
+    <parent v-if="comment.parent" :comment="comment.parent" @parentId="getParentId" />
   </div>
 </template>
 
@@ -20,6 +20,14 @@ export default {
   props: ["comment"],
   components: {
     parent
+  },
+  methods: {
+    replace() {
+      this.$emit("sendId", this.comment.id);
+    },
+    getParentId(id) {
+      this.$emit("sendId", id);
+    }
   }
 };
 </script>
@@ -27,7 +35,7 @@ export default {
 <style lang="less" scoped>
 .Comment {
   color: white;
-  padding-bottom: 2.778vw;
+  padding: 2.778vw;
   border-bottom: 1px solid #444;
   .user {
     display: flex;

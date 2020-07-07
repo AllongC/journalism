@@ -38,27 +38,46 @@
     <van-popup v-model="commentShow" round position="bottom" :style="{ height: '70%',}">
       <p class="title">评论</p>
       <p class="miniTitle">精彩评论</p>
-      <Comment :comment="item" v-for="item in comment" :key="item.id" />
+      <Comment :comment="item" v-for="item in comment" :key="item.id" @sendId="getId" />
+      <Input :post="post" ref="Input" :parent_id="parent_id" @reload="reload" />
     </van-popup>
   </div>
 </template>
 
 <script>
 import Comment from "@/components/Comment/index";
+import Input from "@/components/Comment//Input";
 export default {
   components: {
-    Comment
+    Comment,
+    Input
   },
   data() {
     return {
       post: [],
       commentShow: false,
-      comment: []
+      comment: [],
+      parent_id: ""
     };
   },
   methods: {
+    getComment() {
+      this.$axios({
+        url: "/post_comment/" + this.$route.params.id
+      }).then(res => {
+        const { data } = res.data;
+        this.comment = data;
+      });
+    },
+    reload() {
+      this.getComment();
+    },
     showPopup() {
       this.commentShow = true;
+    },
+    getId(id) {
+      this.parent_id = id;
+      this.$refs.Input.getFocus();
     },
     load() {
       this.$axios({
@@ -118,13 +137,7 @@ export default {
   },
   mounted() {
     this.load();
-    this.$axios({
-      url: "/post_comment/" + this.$route.params.id
-    }).then(res => {
-      const { data } = res.data;
-      this.comment = data;
-      console.log(this.comment);
-    });
+    this.getComment();
   }
 };
 </script>
@@ -226,6 +239,7 @@ export default {
   .icon-ziyuan1 {
     font-size: 22px;
   }
+
   .icon-B {
     color: red;
   }
@@ -239,14 +253,16 @@ export default {
 .van-popup {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 2.778vw;
+  padding-bottom: 90px;
   .title {
+    margin-top: 2.778vw;
     text-align: center;
     color: white;
   }
   .miniTitle {
     color: white;
     font-size: 3.333vw;
+    margin-left: 2.778vw;
   }
 }
 </style>
