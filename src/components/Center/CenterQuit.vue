@@ -1,12 +1,20 @@
 <template>
   <div class="quit">
     <p class="iconfont icon-guanbi"></p>
-    <p>退出</p>
+    <p @click="quit">退出</p>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    quit() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("userId");
+      this.$router.replace("/login");
+    }
+  }
+};
 </script>
 
 <style lang="less" scoped>
