@@ -5,21 +5,21 @@
         <p class="title">{{post.title}}</p>
         <p class="comment">{{post.user.nickname}} {{post.comment_length}}跟帖</p>
       </div>
-      <img :src="post.cover[0].url" alt />
+      <img :src="post.cover[0].url|addBaseURL" alt />
     </div>
     <div class="multiPhoto" v-if="post.type==1&&post.cover.length>=3">
       <div class="mask">
         <p class="title">{{post.title}}</p>
         <p class="comment">{{post.user.nickname}} {{post.comment_length}}跟帖</p>
       </div>
-      <img :src="post.cover[0].url" alt />
+      <img :src="post.cover[0].url|addBaseURL" alt />
     </div>
     <div class="video" v-else-if="post.type==2&&post.cover.length>=1">
       <div class="mask">
         <p class="title">{{post.title}}</p>
         <p class="comment">{{post.user.nickname}} {{post.comment_length}}跟帖</p>
       </div>
-      <img :src="post.cover[0].url" alt />
+      <img :src="post.cover[0].url|addBaseURL" alt />
     </div>
   </div>
 </template>

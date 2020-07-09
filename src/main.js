@@ -32,6 +32,14 @@ axios.interceptors.response.use(res => {
   }
   return res
 })
+Vue.filter('addBaseURL', url => {
+  const reg = new RegExp(/^http/);
+  if (reg.test(url)) {
+    return url
+  } else {
+    return axios.defaults.baseURL + url
+  }
+});
 Vue.prototype.$axios = axios
 Vue.use(Vant)
 Vue.config.productionTip = false
