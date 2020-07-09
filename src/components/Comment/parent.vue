@@ -36,14 +36,14 @@ export default {
     color: rgb(31, 184, 245);
   }
   .nickname {
-    margin-right: 1.111vw;
+    margin-right: 0.556vw;
   }
   .content {
     margin-left: 1.111vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 55.556vw;
+    width: 52.778vw;
   }
 }
 </style>

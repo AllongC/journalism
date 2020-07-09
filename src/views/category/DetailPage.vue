@@ -48,7 +48,7 @@
 
 <script>
 import Comment from "@/components/Comment/index";
-import Input from "@/components/Comment//Input";
+import Input from "@/components/Comment/Input";
 export default {
   components: {
     Comment,
@@ -267,7 +267,8 @@ export default {
     top: 1.944vw;
     left: 7.222vw;
     background-color: red;
-    padding: 1.667vw 1px;
+    padding: 1.667vw 0px;
+    width: 4.444vw;
     height: 0vw;
     font-size: 2.222vw;
     text-align: center;
