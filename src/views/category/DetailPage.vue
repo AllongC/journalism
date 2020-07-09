@@ -28,7 +28,9 @@
     <div class="roll">
       <p @click="unFollow" v-if="post.has_follow" class="iconfont font icon-B"></p>
       <p @click="follow" v-else class="iconfont font icon-guanzhu3"></p>
-      <p is-link @click="showPopup" class="iconfont font icon-pinglun1"></p>
+      <p is-link @click="showPopup" class="iconfont font icon-pinglun1">
+        <span class="comments">{{commentTotal}}</span>
+      </p>
       <p @click="like" class="iconfont font icon-ziyuan1" :class="{redfont:post.has_like}"></p>
       <p class="font num">{{post.like_length}}</p>
       <p @click="star" v-if="post.has_star" class="iconfont font icon-shoucang"></p>
@@ -39,7 +41,7 @@
       <p class="title">评论</p>
       <p class="miniTitle">精彩评论</p>
       <Comment :comment="item" v-for="item in comment" :key="item.id" @sendId="getId" />
-      <Input :post="post" ref="Input" :parent_id="parent_id" @reload="reload" />
+      <Input :post="post" ref="Input" :parent_id="parent_id" @reload="reload" :total="total" />
     </van-popup>
   </div>
 </template>
@@ -57,16 +59,35 @@ export default {
       post: [],
       commentShow: false,
       comment: [],
-      parent_id: ""
+      parent_id: "",
+      total: 0
     };
   },
+  computed: {
+    commentTotal() {
+      this.comment.forEach(item => {
+        if (item.content) {
+          this.total++;
+          this.isParent(item.parent);
+        }
+      });
+      return this.total;
+    }
+  },
   methods: {
+    isParent(item) {
+      if (item) {
+        this.total++;
+        this.isParent();
+      }
+    },
     getComment() {
       this.$axios({
         url: "/post_comment/" + this.$route.params.id
       }).then(res => {
         const { data } = res.data;
         this.comment = data;
+        this.total = 0;
       });
     },
     reload() {
@@ -85,7 +106,6 @@ export default {
       }).then(res => {
         const { data } = res.data;
         this.post = data;
-        console.log(this.post);
       });
     },
     unFollow() {
@@ -239,7 +259,23 @@ export default {
   .icon-ziyuan1 {
     font-size: 22px;
   }
-
+  .icon-pinglun1 {
+    position: relative;
+  }
+  .comments {
+    position: absolute;
+    top: 7px;
+    left: 26px;
+    background-color: red;
+    padding: 6px 4px;
+    height: 0px;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    line-height: 0px;
+    text-align: center;
+    border-radius: 50%;
+  }
   .icon-B {
     color: red;
   }

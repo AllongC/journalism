@@ -2,7 +2,9 @@
   <div>
     <div v-if="!focus" class="repalce">
       <input type="text" @focus="getFocus" v-model="content" />
-      <p class="iconfont font icon-pinglun1"></p>
+      <p class="iconfont font icon-pinglun1">
+        <span class="comments">{{total}}</span>
+      </p>
       <p @click="star" v-if="post.has_star" class="iconfont font icon-shoucang"></p>
       <p @click="star" v-else class="iconfont font icon-xiazai11"></p>
       <p class="iconfont font icon-share_icon"></p>
@@ -16,7 +18,7 @@
 
 <script>
 export default {
-  props: ["post", "parent_id"],
+  props: ["post", "parent_id", "total"],
   data() {
     return {
       focus: false,
@@ -101,6 +103,23 @@ export default {
     line-height: 50px;
     color: #fff;
     margin: 0px 10px;
+  }
+  .icon-pinglun1 {
+    position: relative;
+  }
+  .comments {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    background-color: red;
+    padding: 6px 4px;
+    height: 0px;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    line-height: 0px;
+    text-align: center;
+    border-radius: 50%;
   }
   .icon-shoucang {
     color: rgb(231, 231, 93);
