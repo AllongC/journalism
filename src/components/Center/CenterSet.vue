@@ -18,7 +18,7 @@
         <p>修改</p>
       </div>
       <div>
-        <p class="iconfont icon-shezhi font"></p>
+        <p class="iconfont icon-shezhi font" @click="$router.push('/set')"></p>
         <p>设置</p>
       </div>
     </div>

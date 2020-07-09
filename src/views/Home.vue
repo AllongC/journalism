@@ -81,6 +81,22 @@ export default {
     }
   },
   mounted() {
+    const column = localStorage.getItem("delColumn");
+    if (column) {
+      const data = JSON.parse(column);
+      this.column = data.map(item => {
+        return {
+          ...item,
+          post: [],
+          pageIndex: 1,
+          pageSize: 5,
+          loading: false,
+          finished: false
+        };
+      });
+      this.getPost();
+      return;
+    }
     this.$axios({
       url: "/category",
       method: "get"

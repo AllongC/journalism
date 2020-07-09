@@ -13,6 +13,7 @@ import CenterPage from '@/views/personal/CenterPage'
 import EditPage from '@/views/personal/EditPage'
 import FocusPage from '@/views/personal/FocusPage'
 import CollectPage from '@/views/personal/CollectPage'
+import SetPage from '@/views/personal/SetPage'
 import text from '@/views/personal/text'
 
 
@@ -75,6 +76,14 @@ const routes = [
     path: '/collect',
     name: 'Collect',
     component: CollectPage,
+    meta: {
+      auth: true
+    }
+  },
+  {
+    path: '/set',
+    name: 'Set',
+    component: SetPage,
     meta: {
       auth: true
     }
