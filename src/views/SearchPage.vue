@@ -34,7 +34,9 @@
         </div>
       </div>
     </div>
-    <div class="noneSearch" v-if="!result.length&&!isShow">没找到关于 ‘{{keyword}}’ 的内容</div>
+    <div class="noneSearch" v-if="!result.length&&!isShow">
+      <van-empty :description="'没找到关于 “'+keyword+'” 的内容'" />
+    </div>
     <Post :post="post" :index="index" v-for="(post,index) in  result" :key="post.id" />
   </div>
 </template>
@@ -181,8 +183,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     .items {
-      margin: 5.556vw 0vw 3.889vw 1.667vw;
-      width: 44%;
+      margin: 5.556vw 0vw 3.889vw 8.333vw;
+      width: 40%;
       font-size: 3.333vw;
       .icon-xiangshang {
         color: red;
@@ -193,7 +195,7 @@ export default {
 }
 .noneSearch {
   text-align: center;
-  margin-top: 55.556vw;
+  margin-top: 41.667vw;
   font-size: 3.889vw;
 }
 </style>
