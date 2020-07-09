@@ -4,7 +4,7 @@
       <span class="nickname">{{comment.user.nickname}}</span>
       :
       <p class="content">{{comment.content}}</p>
-      <p @click="sendId">回复</p>
+      <p @click="sendId" class="replace">回复</p>
     </div>
     <parent v-if="comment.parent" :comment="comment.parent" @parentId="getId" />
   </div>
@@ -38,12 +38,15 @@ export default {
   .nickname {
     margin-right: 0.556vw;
   }
+  .replace {
+    margin-right: 2.778vw;
+  }
   .content {
+    flex: 1;
     margin-left: 1.111vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 52.778vw;
   }
 }
 </style>
