@@ -184,7 +184,7 @@ export default {
 }
 
 .normal {
-  padding: 10px;
+  padding: 2.778vw;
   color: rgb(233, 230, 230);
   h2 {
     font-size: 5vw;
@@ -240,36 +240,36 @@ export default {
   position: fixed;
   right: 0;
   top: 50%;
-  margin-top: -100px;
-  height: 200px;
-  width: 50px;
+  margin-top: -27.778vw;
+  height: 55.556vw;
+  width: 13.889vw;
   .font {
-    font-size: 22px;
+    font-size: 6.111vw;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
-    height: 50px;
-    line-height: 50px;
+    height: 13.889vw;
+    line-height: 13.889vw;
     color: #fff;
   }
   .num {
-    height: 0px;
-    line-height: 0px;
-    font-size: 12px;
+    height: 0vw;
+    line-height: 0vw;
+    font-size: 3.333vw;
   }
   .icon-ziyuan1 {
-    font-size: 22px;
+    font-size: 6.111vw;
   }
   .icon-pinglun1 {
     position: relative;
   }
   .comments {
     position: absolute;
-    top: 7px;
-    left: 26px;
+    top: 1.944vw;
+    left: 7.222vw;
     background-color: red;
-    padding: 6px 1px;
-    height: 0px;
-    font-size: 8px;
+    padding: 1.667vw 1px;
+    height: 0vw;
+    font-size: 2.222vw;
     text-align: center;
     color: white;
     line-height: 0px;
@@ -289,7 +289,7 @@ export default {
 .van-popup {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 50px;
+  padding-bottom: 13.889vw;
   .title {
     margin-top: 2.778vw;
     text-align: center;

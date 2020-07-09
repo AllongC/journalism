@@ -116,84 +116,84 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px 10px;
-  margin-top: 6px;
-  padding: 6px;
+  margin: 0vw 2.778vw;
+  margin-top: 1.667vw;
+  padding: 1.667vw;
   .middle {
     position: relative;
     flex: 1;
-    margin: 0 10px;
+    margin: 0 2.778vw;
     span {
-      top: 6px;
-      left: 12px;
-      font-size: 16px;
+      top: 1.667vw;
+      left: 3.333vw;
+      font-size: 4.444vw;
       position: absolute;
       color: #979797;
     }
     input {
-      text-indent: 40px;
+      text-indent: 11.111vw;
       width: 100%;
       background-color: #4f4f4f;
       color: #979797;
       border: none;
-      height: 30px;
-      border-radius: 15px;
+      height: 8.333vw;
+      border-radius: 4.167vw;
     }
   }
 }
 .history {
   color: rgb(236, 233, 233);
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 2.778vw;
+  padding: 2.778vw;
   border-bottom: 1px solid rgb(82, 81, 81);
   .icon-lishijilu-copy {
-    margin-right: 6px;
-    font-size: 14px;
+    margin-right: 1.667vw;
+    font-size: 3.889vw;
   }
   h2 {
-    font-size: 14px;
+    font-size: 3.889vw;
     font-weight: normal;
   }
   .item {
     display: flex;
     flex-wrap: wrap;
     .items {
-      margin: 14px 0px 14px 6px;
-      padding: 6px;
-      font-size: 12px;
+      margin: 3.889vw 0vw 3.889vw 1.667vw;
+      padding: 1.667vw;
+      font-size: 3.333vw;
     }
   }
 }
 .hot {
   color: rgb(236, 233, 233);
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 2.778vw;
+  padding: 2.778vw;
   .icon-resou1 {
     color: red;
-    margin-right: 6px;
-    font-size: 14px;
+    margin-right: 1.667vw;
+    font-size: 3.889vw;
   }
   h2 {
-    font-size: 14px;
+    font-size: 3.889vw;
     font-weight: normal;
   }
   .item {
     display: flex;
     flex-wrap: wrap;
     .items {
-      margin: 20px 0px 14px 6px;
+      margin: 5.556vw 0vw 3.889vw 1.667vw;
       width: 44%;
-      font-size: 12px;
+      font-size: 3.333vw;
       .icon-xiangshang {
         color: red;
-        font-size: 12px;
+        font-size: 3.333vw;
       }
     }
   }
 }
 .noneSearch {
   text-align: center;
-  margin-top: 200px;
-  font-size: 14px;
+  margin-top: 55.556vw;
+  font-size: 3.889vw;
 }
 </style>

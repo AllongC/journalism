@@ -28,22 +28,22 @@ export default {
 <style lang="less" scoped>
 .parent {
   display: flex;
-  font-size: 12px;
-  padding: 10px 0px 10px 0px;
-  margin-left: 60px;
+  font-size: 3.333vw;
+  padding: 2.778vw 0vw 2.778vw 0vw;
+  margin-left: 16.667vw;
   background-color: #222;
   span {
     color: rgb(31, 184, 245);
   }
   .nickname {
-    margin-right: 4px;
+    margin-right: 1.111vw;
   }
   .content {
-    margin-left: 4px;
+    margin-left: 1.111vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 200px;
+    width: 55.556vw;
   }
 }
 </style>

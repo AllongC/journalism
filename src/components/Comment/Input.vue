@@ -81,40 +81,40 @@ export default {
   align-items: center;
   bottom: 0;
   background-color: #111;
-  height: 50px;
+  height: 13.889vw;
   width: 100%;
   border-top: 1px solid #444;
   input {
-    text-indent: 10px;
+    text-indent: 2.778vw;
     flex: 1;
-    height: 30px;
-    margin-top: 10px;
+    height: 8.333vw;
+    margin-top: 2.778vw;
     border: none;
-    border-radius: 15px;
-    margin-left: 10px;
+    border-radius: 4.167vw;
+    margin-left: 2.778vw;
     background-color: #2f2f2f;
     color: #979797;
   }
   .font {
-    font-size: 20px;
+    font-size: 5.556vw;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
-    height: 50px;
-    line-height: 50px;
+    height: 13.889vw;
+    line-height: 13.889vw;
     color: #fff;
-    margin: 0px 10px;
+    margin: 0vw 2.778vw;
   }
   .icon-pinglun1 {
     position: relative;
   }
   .comments {
     position: absolute;
-    top: 10px;
-    left: 14px;
+    top: 2.778vw;
+    left: 3.889vw;
     background-color: red;
-    padding: 6px 1px;
+    padding: 1.667vw 1px;
     height: 0px;
-    font-size: 10px;
+    font-size: 2.778vw;
     text-align: center;
     color: white;
     line-height: 0px;
@@ -132,26 +132,26 @@ export default {
   align-items: flex-end;
   bottom: 0;
   background-color: #111;
-  height: 90px;
+  height: 25vw;
   width: 100%;
   border-top: 1px solid #444;
   color: white;
   textarea {
     flex: 1;
-    text-indent: 10px;
+    text-indent: 2.778vw;
     border: none;
     resize: none;
     background-color: #2f2f2f;
-    margin-left: 10px;
-    border-radius: 10px;
+    margin-left: 2.778vw;
+    border-radius: 2.778vw;
     color: #979797;
   }
   p {
-    margin: 0px 10px;
+    margin: 0vw 2.778vw;
     background-color: #2f2f2f;
     text-align: center;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 2.778vw 5.556vw;
+    border-radius: 5.556vw;
     color: #979797;
   }
 }

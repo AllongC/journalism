@@ -78,10 +78,10 @@ export default {
 
 <style lang="less" scoped>
 .delColumn {
-  padding: 10px;
+  padding: 2.778vw;
   .title {
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 2.778vw;
+    font-size: 3.889vw;
     color: #e4e4e4;
     font-weight: normal;
   }
@@ -90,18 +90,18 @@ export default {
     align-items: center;
     flex-wrap: wrap;
     .item {
-      margin: 10px 10px;
-      padding: 10px 16px;
+      margin: 2.778vw 2.778vw;
+      padding: 2.778vw 4.444vw;
       border: 1px solid #e4e4e4;
       color: #e4e4e4;
     }
   }
 }
 .addColumn {
-  padding: 10px;
+  padding: 2.778vw;
   .title {
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 2.778vw;
+    font-size: 3.889vw;
     color: #e4e4e4;
     font-weight: normal;
   }
@@ -110,8 +110,8 @@ export default {
     align-items: center;
     flex-wrap: wrap;
     .item {
-      margin: 10px 10px;
-      padding: 10px 16px;
+      margin: 2.778vw 2.778vw;
+      padding: 2.778vw 4.444vw;
       border: 1px solid #e4e4e4;
       color: #e4e4e4;
     }
