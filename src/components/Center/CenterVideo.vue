@@ -56,6 +56,7 @@ export default {};
   }
   .bottom {
     width: 100%;
+    height: 61.111vw;
     border-radius: 0vw 0vw 2.778vw 2.778vw;
     margin-top: 1.111vw;
     display: flex;
