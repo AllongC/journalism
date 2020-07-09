@@ -253,7 +253,7 @@ export default {
 .van-popup {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 90px;
+  padding-bottom: 50px;
   .title {
     margin-top: 2.778vw;
     text-align: center;
