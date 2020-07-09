@@ -9,19 +9,6 @@
       <p @click="searchKeyword">搜索</p>
     </div>
     <div class="outside" v-if="!result.length&&isShow">
-      <div class="history">
-        <h2>
-          <span class="iconfont icon-lishijilu-copy"></span>历史记录
-        </h2>
-        <div class="item">
-          <p
-            class="items"
-            v-for="(item,index) in record"
-            :key="index"
-            @click="clickHistory(item)"
-          >{{item}}</p>
-        </div>
-      </div>
       <div class="hot">
         <h2>
           <span class="iconfont icon-resou1"></span>热搜榜
@@ -30,6 +17,15 @@
           <p class="items" v-for="(item,index) in hots" :key="index" @click="clickHots(item)">
             {{item}}
             <span class="iconfont icon-xiangshang"></span>
+          </p>
+        </div>
+      </div>
+      <div class="history">
+        <div class="item">
+          <p class="items" v-for="(item,index) in record" :key="index">
+            <span class="iconfont icon-lishijilu-copy"></span>
+            <span @click="clickHistory(item)" class="font">{{item}}</span>
+            <span class="iconfont icon-guanbi1" @click="delHistory(item)"></span>
           </p>
         </div>
       </div>
@@ -74,6 +70,10 @@ export default {
     }
   },
   methods: {
+    delHistory(item) {
+      const index = this.record.indexOf(item);
+      this.record.splice(index, 1);
+    },
     goback() {
       if (!this.keyword) {
         this.$router.back();
@@ -81,6 +81,9 @@ export default {
       this.keyword = "";
     },
     searchKeyword() {
+      if (!this.keyword) {
+        return;
+      }
       this.$axios({
         url: "/post_search",
         method: "get",
@@ -118,9 +121,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0vw 2.778vw;
   margin-top: 1.667vw;
-  padding: 1.667vw;
+  padding: 1.667vw 2.778vw;
+  padding-bottom: 4.444vw;
+  border-bottom: 1px solid rgb(82, 81, 81);
   .middle {
     position: relative;
     flex: 1;
@@ -147,22 +151,28 @@ export default {
   color: rgb(236, 233, 233);
   margin-top: 2.778vw;
   padding: 2.778vw;
-  border-bottom: 1px solid rgb(82, 81, 81);
-  .icon-lishijilu-copy {
-    margin-right: 1.667vw;
-    font-size: 3.889vw;
-  }
-  h2 {
-    font-size: 3.889vw;
-    font-weight: normal;
-  }
+
   .item {
-    display: flex;
-    flex-wrap: wrap;
     .items {
+      display: flex;
+      align-items: center;
       margin: 3.889vw 0vw 3.889vw 1.667vw;
       padding: 1.667vw;
       font-size: 3.333vw;
+      border-bottom: 1px solid rgb(82, 81, 81);
+      .icon-lishijilu-copy {
+        margin-right: 1.667vw;
+        font-size: 3.889vw;
+      }
+      .font {
+        margin: 0px 1.111vw;
+        padding: 0.556vw 0px;
+      }
+      .icon-guanbi1 {
+        flex: 1;
+        text-align: right;
+        font-size: 2.778vw;
+      }
     }
   }
 }
